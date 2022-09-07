@@ -1,0 +1,31 @@
+@media (max-width: 992px) {
+  section > .container-xl {
+    padding: 70px 20px;
+  }
+  /* nav bar */
+  #nav-bar a.full-name {
+    height: 60px;
+    width: 100px;
+    padding: 0;
+  }
+
+  #nav-bar a.full-name * {
+    display: none;
+  }
+  /* about */
+  #target {
+    max-width: unset;
+  }
+  /* certificate */
+  .certificate-item {
+    flex-direction: column;
+  }
+  .certificate-list .image {
+    width: 100%;
+  }
+  /* project */
+  .project-detail th {
+    width: 70px;
+    padding-right: 10px;
+  }
+}

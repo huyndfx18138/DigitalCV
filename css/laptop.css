@@ -1,0 +1,385 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary: #199cdb;
+  --gray: #787878;
+  --yellow: #d6c08d;
+  --border: #eaeaea;
+}
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 15px;
+}
+p {
+  line-height: 1.7;
+}
+a:link,
+a:visited {
+  text-decoration: none;
+}
+ul {
+  padding-left: 0;
+  margin: 0;
+}
+section > .container-xl {
+  padding: 70px 50px;
+}
+
+/* ---ultilities---- */
+
+.bg-gray {
+  background: #f5f5f5;
+}
+.section-title {
+  margin-bottom: 30px;
+  font-size: 27px;
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+.primary-icon {
+  color: var(--primary);
+}
+.flex-center {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.gray-text {
+  color: var(--gray);
+}
+
+.inside-list {
+  margin-top: 10px;
+  line-height: 1.6;
+  list-style-type: none;
+}
+.inside-list li::before {
+  content: "- ";
+}
+
+.badge {
+  background-color: var(--primary);
+  color: white;
+}
+/* ---banner---  */
+#banner {
+  position: relative;
+  color: #fff;
+  overflow: hidden;
+}
+.banner-image {
+  width: 100%;
+  height: 490px;
+  object-fit: cover;
+  object-position: top;
+  transform: scale(1.1);
+}
+#banner .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+#banner h1 {
+  font-weight: 600;
+  font-size: 52px;
+  margin-top: 120px;
+}
+#banner .text span {
+  color: #bbb9ba;
+  font-size: 17px;
+  font-family: "open_sanslight";
+}
+/* ---nav bar---  */
+#nav-bar nav {
+  box-shadow: rgb(0 0 0 / 4%) 0 1.95px 6px;
+  position: relative;
+  text-align: center;
+}
+/* nav bar link  */
+#nav-bar a {
+  padding: 20px;
+  color: #333333;
+  text-transform: uppercase;
+  border-left: 1px solid var(--border);
+  display: inline-block;
+}
+#nav-bar a:last-of-type {
+  border-right: 1px solid var(--border);
+}
+#nav-bar a .icon {
+  margin-left: 7px;
+}
+/* nav bar fullname element */
+#nav-bar a.full-name {
+  padding: 8px 90px;
+  text-transform: capitalize;
+}
+#nav-bar a.full-name p {
+  font-size: 24px;
+  line-height: 1;
+  margin-bottom: 0;
+}
+#nav-bar a.full-name span {
+  font-size: 12px;
+  color: #bbb9ba;
+}
+
+/* ---about---  */
+#about .col-12 {
+  padding: 70px 50px 50px 50px;
+}
+#target {
+  max-width: 540px;
+  margin-left: auto;
+}
+#personal-info {
+  background-color: #f0f0f0;
+}
+
+#about ul {
+  list-style-type: none;
+}
+#about ul.info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+#about ul.social {
+  display: flex;
+  margin-top: 25px;
+  gap: 10px;
+}
+/* ---job info---  */
+#job-info .section-title {
+  margin: 0;
+}
+.badge.time {
+  border-radius: 20px;
+  padding: 5px 12px;
+  font-size: 0.8em;
+  align-self: flex-start;
+}
+
+.job-info-box {
+  border: 1px solid var(--border);
+  height: 100%;
+}
+.job-info-box-inner {
+  display: grid;
+  grid-template-columns: 7.5fr 2.5fr;
+  padding: 44px 30px;
+  align-items: end;
+  row-gap: 50px;
+}
+.job-info-icon {
+  font-size: 30px;
+  color: #b5b1bc;
+  justify-self: center;
+  justify-self: end;
+}
+.hobby-list {
+  list-style-type: none;
+  display: flex;
+  grid-column: 1/-1;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+.job-info-list {
+  grid-column: 1 /-1;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.job-info-list li {
+  display: flex;
+  gap: 10px;
+}
+.job-info-list:not(.level) > li::before {
+  content: "●";
+  color: var(--primary);
+  font-weight: bold;
+  display: block;
+  font-size: 18px;
+}
+.job-info-title {
+  font-size: 17px;
+  line-height: 1.3;
+}
+
+.date {
+  color: var(--gray);
+  font-style: italic;
+  font-size: 0.8em;
+  margin-top: 6px;
+}
+.now {
+  border-radius: 7px;
+  padding: 2px 10px;
+}
+/* level bar of skills and languages box  */
+.level-bar {
+  display: inline-block;
+  background-color: #dbdbdb;
+  margin-right: 10px;
+  width: 45px;
+  height: 2px;
+}
+.level-bar.active {
+  background-color: var(--primary);
+}
+.hobby-box {
+  flex-basis: 80px;
+  flex-direction: column;
+  gap: 10px;
+}
+.hobby-box i {
+  font-size: 20px;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+}
+.hobby-box p {
+  color: var(--gray);
+  font-size: 13px;
+}
+/* ----certificate --- */
+#certificate .section-title {
+  margin-bottom: 10px;
+}
+.certificate-list .col-12 {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  position: relative;
+}
+.certificate-list .col-12:nth-child(even) {
+  border-left: 1px solid var(--yellow);
+}
+.certificate-item {
+  display: flex;
+  gap: 30px;
+  align-items: start;
+}
+.certificate-item .image {
+  width: 180px;
+}
+.certificate-item .content-title {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* certificate row seperator */
+.certificate-list .col-12:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  bottom: -35px;
+  border-bottom: 1px solid var(--yellow);
+}
+.certificate-list .col-12:nth-child(odd):before {
+  left: calc(var(--bs-gutter-x) * 0.5);
+  right: 0;
+}
+.certificate-list .col-12:nth-child(even):before {
+  left: -100px;
+  right: calc(var(--bs-gutter-x) * 0.5);
+}
+
+/* ---project----  */
+#project {
+  margin-bottom: 20px;
+}
+#project .col-12 {
+  gap: 0;
+  display: flex;
+  flex-direction: column;
+}
+.project-image {
+  width: 100%;
+  display: block;
+}
+#project .col-12 > div {
+  padding: 13px 20px;
+  border: 1px solid var(--border);
+  border-bottom: 0;
+}
+.project-title {
+  color: #000;
+  text-transform: uppercase;
+}
+.project-title a {
+  color: #000;
+}
+.project-info {
+  display: flex;
+  gap: 15px;
+}
+.project-data-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.project-data {
+  gap: 3px;
+}
+.project-detail {
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  flex: 1;
+}
+.project-detail tbody {
+  vertical-align: top;
+}
+
+.project-detail tr {
+  border-bottom: 1px solid var(--border);
+  padding: 7px 19px;
+}
+.project-detail tr:last-child {
+  border-bottom: 0;
+}
+.project-detail tr td,
+.project-detail tr th {
+  padding: 5px 8px;
+}
+.project-detail th {
+  width: 96px;
+  font-weight: normal;
+}
+
+/* ---footer---  */
+
+#footer {
+  color: var(--gray);
+}
+#footer .container-xl {
+  padding: 30px 50px 40px 50px;
+}
+#footer ul {
+  list-style-type: none;
+  text-align: center;
+  gap: 30px;
+}
+#footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--gray);
+}
+#footer .primary-icon {
+  font-size: 30px;
+}
+#footer li span {
+  line-height: 2;
+}

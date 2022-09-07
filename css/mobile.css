@@ -1,0 +1,63 @@
+@media (max-width: 768px) {
+  /* utilities  */
+  .section-title {
+    font-size: 25px;
+  }
+  /* banner  */
+  #banner .banner-image {
+    height: 650px;
+  }
+  #banner h1 {
+    font-size: 36px;
+  }
+  /* navbar */
+  #nav-bar nav {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-direction: column;
+  }
+  #nav-bar a {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px 30px;
+    justify-content: flex-end;
+    gap: 10px;
+    width: 100%;
+  }
+  #nav-bar a.full-name {
+    display: none;
+  }
+  /* about  */
+  #about .col-12 {
+    padding: 70px 25px 40px 25px;
+  }
+  /* certificate  */
+  .certificate-list > div {
+    border: 0;
+  }
+  .certificate-list .col-12 {
+    border: 0 !important;
+  }
+  .certificate-list .col-12:nth-child(odd):before,
+  .certificate-list .col-12:nth-child(even):before {
+    left: calc(var(--bs-gutter-x) * 0.5);
+    right: calc(var(--bs-gutter-x) * 0.5);
+  }
+  /* project */
+  .project-detail th {
+    width: 100px;
+    padding-right: 10px;
+  }
+  .project-info,
+  .project-data-wrapper {
+    flex-direction: column;
+  }
+
+  /* footer  */
+  #footer ul {
+    gap: 10px;
+  }
+  .social-name {
+    display: none;
+  }
+}

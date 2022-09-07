@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+ul {
+  list-style-type: none;
+}
+p {
+  line-height: 1.5;
+  color: #4d4d4d;
+}
+/* utilities  */
+.container {
+  background-color: #0000ff;
+  padding: 20px;
+}
+.row {
+  display: flex;
+  gap: 20px;
+}
+.col {
+  padding: 10px;
+}
+.box {
+  background-color: #f0f8ff;
+  padding: 20px;
+}
+.box-title {
+  color: #0000ff;
+  font-weight: bold;
+  font-size: 25px;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #aabfb6;
+}
+.list-icon {
+  height: 45px;
+  width: 45px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  flex-shrink: 0;
+  margin-top: 5px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.list li {
+  display: flex;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+.list-content {
+  align-self: center;
+}
+
+.list-item-title {
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 20px;
+}
+
+/* goals  */
+
+.goal-list li {
+  border-bottom: 1px solid #dae7e8;
+}
+.goal-list .list-icon {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+.flag-icon {
+  background-image: url(../images/project-chapter/flag.png);
+}
+/* team  */
+#team {
+  grid-area: 1/2/2/3;
+}
+.user-icon {
+  background-image: url(../images/project-chapter/user.png);
+}
+/* timeline  */
+#timeline {
+  grid-area: 1/3/3/ 4;
+}
+.timeline-icon {
+  background-color: #9e88ff;
+  color: white;
+  border: 1px solid #666666;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 300;
+}
+.timeline-list li .list-content {
+  padding-bottom: 10px;
+  border-bottom: 1px dashed #52bdc2;
+  padding-left: 10px;
+  flex: 1;
+}
+/* scopes  */
+.scrope-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 22px;
+}
+.scope-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+/* primary  */
+.question-icon {
+  background-image: url(../images/project-chapter/question-mask.png);
+  background-size: 79%;
+  background-position: center;
+}
+/* ---tablet responsive---  */
+@media (max-width: 992px) {
+  /* utilities  */
+  .container {
+    padding: 0;
+    background-color: unset;
+  }
+  .grid {
+    display: block;
+  }
+  /* team list  */
+  .team-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .team-list li:nth-child(3) {
+    grid-area: 1/2/2/3;
+  }
+}
+/* ---mobile responsive---  */
+@media (max-width: 568px) {
+  /* hide icon goals list and team list  */
+  .goal-list .list-icon,
+  .team-list .list-icon {
+    display: none;
+  }
+  /* utilities  */
+  .row {
+    flex-direction: column;
+  }
+  /* team  */
+  .team-list {
+    grid-template-columns: 1fr;
+  }
+  .team-list li:nth-child(3) {
+    grid-area: unset;
+  }
+}
